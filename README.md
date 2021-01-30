@@ -2,6 +2,8 @@
 
 .NET C# console application used to launch and run multiple servers on different ports as background processes. Requirement is to apply the `Port Patch` on the `ConquestServer.exe` before, otherwise servers will run on the same hard coded port.
 
+This application can be easily configured as Scheduled Task (e.g. at startup) using the [Windows Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler) so the  LOTRC servers start automatically after the server restarted. No permanent user login is required, the servers can run as background tasks without any GUI.
+
 ## Configuration
 
 The configuration is done using the file `MultiDedicated.xml` which is placed in `C:\Users\[UserName]\Documents\The Lord of the Rings - Conquest (Server PC)\` next to the regular `Dedicated.xml` file.
