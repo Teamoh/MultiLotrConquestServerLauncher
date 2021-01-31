@@ -2,7 +2,7 @@
 
 .NET C# console application used to launch and run multiple servers on different ports as background processes. Requirement is to apply the `Port Patch` on the `ConquestServer.exe` before, otherwise servers will run on the same hard coded port.
 
-This application can be easily configured as Scheduled Task (e.g. at startup) using the [Windows Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler) so the  LOTRC servers start automatically after the server restarted. No permanent user login is required, the servers can run as background tasks without any GUI.
+The MultiLotrConquestServerLauncher also detects if a server is crashed and will automatically re-launch this individual server instance.
 
 ## Configuration
 
@@ -28,3 +28,7 @@ The MultiLotrConquestServerLauncher will read it, process each `Dedicated` node,
 |Port|Server port (optional), overrides the value of the `Port` node in the `Dedicated.xml` (`Config->Plasma->Port`)|
 |RandomStartLevel|Determines if the servers level rotation will begin at a random position but keeps the map order in general. Allowed values: `true` or `false`|
 |RandomLevelOrder|Determines if the servers level rotation should be completly random. Allowed values: `true` or `false`. Please note: when `RandomLevelOrder` is enabled, the `RandomStartLevel` option is ignored.|
+
+# Scheduled Task
+
+This application can be easily configured as Scheduled Task (e.g. at startup) using the [Windows Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler) so the  LOTRC servers start automatically after the server restarted. No permanent user login is required, the servers can run as background tasks without any GUI.
